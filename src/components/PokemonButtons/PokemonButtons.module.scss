@@ -1,0 +1,16 @@
+.pokemons {
+  flex-direction: row;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  .pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 1rem;
+  }
+}

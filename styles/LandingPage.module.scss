@@ -1,0 +1,62 @@
+.page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("../public/background.png");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  .filter {
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    height: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    header {
+      padding: 3rem;
+      display: flex;
+      height: 4rem;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    aside {
+      margin-left: 5px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      height: 100%;
+      justify-content: center;
+      max-width: 4rem;
+      overflow: hidden;
+    }
+
+    main {
+      flex-direction: column;
+      height: stretch;
+      justify-content: space-evenly;
+      align-items: center;
+      display: flex;
+      flex: 1;
+
+      .choose {
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    footer {
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      height: 4rem;
+    }
+  }
+}
