@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { useState } from "react";
 import CustomTitle from "../src/components/CustomTitle/CustomTitle";
 import PokemonButtons from "../src/components/PokemonButtons/PokemonButtons";
 import style from "../styles/LandingPage.module.scss";
