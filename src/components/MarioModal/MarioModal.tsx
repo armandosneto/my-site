@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./MarioModal.module.scss";
 
 interface Props {
@@ -11,7 +11,7 @@ const MarioModal: React.FC<Props> = ({
   showModal,
   onClose = () => {},
 }) => {
-  const [showContent, setShowContent] = useState(false);
+  const [showContent, setShowContent] = useState(true);
 
   if (!showModal) {
     return null;
@@ -26,7 +26,11 @@ const MarioModal: React.FC<Props> = ({
       onClose();
     }, 300);
   };
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowContent(!showContent);
+  //   }, 200);
+  // }, [showModal]);
   return (
     <div
       id="modal"
