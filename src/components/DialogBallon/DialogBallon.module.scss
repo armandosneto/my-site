@@ -1,0 +1,31 @@
+.ballon {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  width: 50vw;
+  height: 300px;
+
+  .arrow {
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    animation: blink 0.8s step-start infinite;
+    display: none;
+
+    &.showing {
+      display: flex;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
