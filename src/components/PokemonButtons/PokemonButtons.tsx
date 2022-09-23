@@ -70,7 +70,7 @@ const PokemonButtons: React.FC<Props> = () => {
               Como sempre quando me apresento, a primeira caracteristica que
               todos tem que saber é que sou baiano! Acabei parando em terras
               goianas pra realizar o sonho de fazer um curso na área de
-              computação, e cá estou, aos 23, quase formando e por irônia do
+              computação, e cá estou, aos 24, quase formando e por irônia do
               destino(e pra minha felicidade) acabei parando no mundo do
               front-end e me apaixonando!
             </p>
