@@ -1,0 +1,45 @@
+.page {
+  background-image: url(../../../public/fightbackground.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .enemyPokemon {
+    position: absolute;
+    top: 25%;
+    right: 12%;
+    animation: appear-right 1s ease-in-out;
+  }
+
+  .myPokemon {
+    position: absolute;
+    bottom: -16.1%;
+    left: 3.5%;
+    // when appearing, it should come from the left
+    animation: appear-left 1s ease-in-out;
+  }
+}
+
+@keyframes appear-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-right {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
