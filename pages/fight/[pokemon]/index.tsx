@@ -3,22 +3,31 @@ import Head from "next/head";
 import style from "./Pokemon.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { Howl } from "howler";
+import PokemonInfo from "../../../src/components/PokemonInfo";
 
 const Pokemon: NextPage = () => {
   const router = useRouter();
   const { pokemon } = router.query;
 
+  const audio = useMemo(() => {
+    return new Howl({
+      src: ["pokemonMusic.mp3"],
+      loop: true,
+      volume: 0.5,
+    });
+  }, []);
+
   useEffect(() => {
-    //when page loads, play /pokemonMusic.mp3
-    const audio = new Audio("/pokemonMusic.mp3");
-    audio.play();
-    // reduce volume
-    audio.volume = 0.2;
+    setTimeout(() => {
+      console.log("audio", audio);
+      audio.play();
+    }, 3000);
     return () => {
-      //when page unmounts, stop playing
       audio.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -29,6 +38,7 @@ const Pokemon: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={style.enemyPokemon}>
+        <PokemonInfo pokemon={"Psyduck"} level={1} maxHp={20} />
         <Image src={`/psyduck.png`} width={300} height={300} alt="pokemon" />
       </div>
       {pokemon && (

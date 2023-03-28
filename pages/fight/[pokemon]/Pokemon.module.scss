@@ -12,17 +12,26 @@
 
   .enemyPokemon {
     position: absolute;
-    top: 25%;
-    right: 12%;
+    top: 32%;
+    right: 18%;
     animation: appear-right 1s ease-in-out;
+
+    @media (max-width: 1600px) {
+      top: 27%;
+      right: 13%;
+    }
   }
 
   .myPokemon {
     position: absolute;
-    bottom: -16.1%;
-    left: 3.5%;
-    // when appearing, it should come from the left
+    bottom: -130px;
+    left: 10%;
     animation: appear-left 1s ease-in-out;
+
+    @media (max-width: 1600px) {
+      bottom: -130px;
+      left: 3%;
+    }
   }
 }
 
