@@ -21,6 +21,13 @@ const Fight: NextPage = () => {
       element.className = `nes-${id}`;
     }
   };
+  const handleLeave = (id: string) => {
+    // change the classname of the <i> element to show the hover effect
+    const element = document.getElementById(id);
+    if (element) {
+      element.className = "nes-pokeball";
+    }
+  };
 
   return (
     <div className={style.page}>
@@ -61,14 +68,18 @@ const Fight: NextPage = () => {
             visible={showDialog}
           />
           {!showDialog && (
-            <>
+            <div className={style.pokemonsWrapper}>
               <p style={{ color: "#fff" }}>Escolha um pokémon:</p>
               <div className={style.pokemons}>
                 <i
                   className="nes-pokeball"
                   id="charmander"
                   onMouseOver={() => handleHover("charmander")}
+                  onMouseLeave={() => {
+                    if (!confirm.show) handleLeave("charmander");
+                  }}
                   onClick={() => {
+                    handleHover("charmander");
                     setConfirm({ show: true, pokemon: "charmander" });
                   }}
                 ></i>
@@ -76,7 +87,11 @@ const Fight: NextPage = () => {
                   className="nes-pokeball"
                   id="squirtle"
                   onMouseOver={() => handleHover("squirtle")}
+                  onMouseLeave={() => {
+                    if (!confirm.show) handleLeave("squirtle");
+                  }}
                   onClick={() => {
+                    handleHover("squirtle");
                     setConfirm({ show: true, pokemon: "squirtle" });
                   }}
                 ></i>
@@ -84,12 +99,16 @@ const Fight: NextPage = () => {
                   className="nes-pokeball"
                   id="bulbasaur"
                   onMouseOver={() => handleHover("bulbasaur")}
+                  onMouseLeave={() => {
+                    if (!confirm.show) handleLeave("bulbasaur");
+                  }}
                   onClick={() => {
+                    handleHover("bulbasaur");
                     setConfirm({ show: true, pokemon: "bulbasaur" });
                   }}
                 ></i>
               </div>
-            </>
+            </div>
           )}
         </main>
         <dialog className="nes-dialog is-rounded" open={confirm.show}>
@@ -100,12 +119,12 @@ const Fight: NextPage = () => {
           </label>
           <label
             onClick={() => setConfirm({ show: false, pokemon: "" })}
-            // onKeyDown={(e) => {
-            //   // check if the label is focused and the user pressed the enter key
-            //   if (e.key === "Enter") {
-            //     setConfirm({ show: false, pokemon: "" });
-            //   }
-            // }}
+            onKeyDown={(e) => {
+              // check if the label is focused and the user pressed the enter key
+              if (e.key === "Enter") {
+                setConfirm({ show: false, pokemon: "" });
+              }
+            }}
           >
             <input type="radio" className="nes-radio" name="answer" />
             <span>Não</span>
