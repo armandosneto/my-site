@@ -1,0 +1,17 @@
+.infoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  position: absolute;
+  top: -25%;
+  left: -25%;
+
+  .pokemonInfo {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 100px;
+  }
+}
