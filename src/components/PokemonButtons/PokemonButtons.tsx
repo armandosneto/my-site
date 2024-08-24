@@ -70,13 +70,56 @@ const PokemonButtons: React.FC<Props> = () => {
               Como sempre quando me apresento, a primeira caracteristica que
               todos tem que saber é que sou baiano! Acabei parando em terras
               goianas pra realizar o sonho de fazer um curso na área de
-              computação, e cá estou, aos 24, quase formando e por irônia do
-              destino(e pra minha felicidade) acabei parando no mundo do
-              front-end e me apaixonando!
+              computação, e cá estou, aos 26, formado em engenharia de
+              computação e por irônia do destino(e pra minha felicidade) acabei
+              parando no mundo do front-end e me apaixonando!
             </p>
           </>
         ) : buttonClicked === "exp" ? (
-          <></>
+          <>
+            <p>
+              OmniSaúde - Estagiário
+              <br />
+              Goiânia, Goiás, Brasil | Maio 2021 - Agosto 2021
+              <br />
+              <ul>
+                <li>
+                  Proposta e auxílio na adoção do NextJS como ferramenta de
+                  desenvolvimento front-end, resultando em maior eficiência e
+                  performance.
+                </li>
+                <li>
+                  Colaboração com a equipe de desenvolvimento para implementar
+                  soluções de monitoramento de leitos de UTI e teleatendimento.
+                </li>
+              </ul>
+            </p>
+            <p>
+              OmniSaúde - Desenvolvedor Front End
+              <br />
+              Goiânia, Goiás, Brasil | Agosto 2021 - Atualmente
+              <br />
+              <ul>
+                <li>
+                  Tecnologias: ReactJs, NextJs, Ant Design, Sass, Less,
+                  Tailwind, ExpressJs, Docker, Jest, React Testing Library
+                </li>
+                <li>
+                  Levantamento de requisitos, tomadas de decisão arquitetural e
+                  construção de microsserviços.
+                </li>
+                <li>
+                  Liderança do time front-end de sustentação, focado em
+                  manutenção de produtos e aplicações internas.
+                </li>
+                <li>
+                  Implementação de soluções responsivas, componentização e
+                  reaproveitamento de código, resultando em melhorias
+                  significativas na eficiência e usabilidade dos sistemas.
+                </li>
+              </ul>
+            </p>
+          </>
         ) : (
           <></>
         )}
