@@ -94,6 +94,7 @@ const PokemonButtons: React.FC<Props> = () => {
                 </li>
               </ul>
             </p>
+            <br />
             <p>
               OmniSaúde - Desenvolvedor Front End
               <br />
